@@ -1,0 +1,664 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+html{
+	scroll-behavior: smooth;
+}
+body{
+	font-family: montserrat;
+	overscroll-behavior: none;
+}
+
+/* ******************** Admin Login Starts ******************** */
+.login-bg{
+	width:100%;
+	height:100vh;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	background-image: url(../images/admin-bg.jpeg);
+	background-size: cover;
+	background-position: center;
+}
+.admin-box{
+	width: 25%;
+	height: 60%;
+	background:rgba(255,255,255,0.1);
+	box-shadow:0 5px 15px  rgba(0,0,0,0.3);
+	border-radius: 25px;
+	border-top:2px solid rgba(0,0,0,0.3);
+	border-left:2px solid rgba(0,0,0,0.3);
+	backdrop-filter: blur(10px);
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+}
+.admin-icon{
+	width:100%;
+	height:auto;
+	text-align:center;
+	margin-bottom:10px;
+}
+.fa-solid{
+	font-size:40px;
+	color: rgba(255,255,255,.8);
+	margin-bottom:15px;
+}
+.admin-box h4{
+	font-size:28px;
+	letter-spacing:1px;
+	color: rgba(255,255,255,.8);
+}
+.admin-form{
+	width:70%;
+	margin-top:15px;
+}
+.admin-form input{
+	width: 100%;
+	height: 40px;
+	outline:none;
+	border:none;
+	background:rgba(0,0,0,.2);
+	color:rgba(255,255,255,.7);
+	box-shadow: 0 0 5px rgba(0,0,0,.5) inset;
+	margin-bottom: 20px;
+	border-radius:25px;
+	font-size:15px;
+	text-indent: 15px;
+}
+.admin-form input::placeholder{
+	color:rgba(255,255,255,.7);
+	letter-spacing:1px;
+}
+.admin-form .admin-btn button{
+	width: 100%;
+	height: 40px;
+	outline:none;
+	border:none;
+	border-radius:25px;
+	margin-top:12px;
+	background-color: rgba(255,255,255,.8);
+	letter-spacing:1px;
+	font-size:15px;
+	padding-top:2px;
+	font-weight:600;
+	cursor:pointer;
+}
+.admin-error{
+	color:red;
+	letter-spacing:1px;
+	font-size:14px;
+	font-weight:600;
+	line-height:25px;
+}
+/* ******************** Admin Login Responsive Starts ******************** */
+@media (max-width:1210px){
+	.admin-box{
+		width: 28%;
+		height: 65%;
+	}
+}
+@media (max-width:1000px){
+	.admin-box{
+		width: 35%;
+		height: 68%;
+	}
+}
+@media (max-width:880px){
+	.admin-box{
+		width: 38%;
+		height: 68%;
+	}
+	.fa-solid{
+		font-size:35px;
+	}
+	.admin-box h4{
+		font-size:25px;
+	}
+	.admin-form input{
+		height: 38px;
+		font-size:14	px;
+	}
+	.admin-form .admin-btn button{
+		height: 38px;
+		font-size:14px;
+	}
+}
+@media (max-width:760px){
+	.admin-box{
+		width: 42%;
+		height: 63%;
+	}
+}
+@media (max-width:625px){
+	.admin-box{
+		width: 50%;
+		height: 60%;
+	}
+}
+@media (max-width:550px){
+	.admin-box{
+		width: 58%;
+		height: 60%;
+	}
+}
+@media (max-width:470px){
+	.admin-box{
+		width: 70%;
+		height: 64%;
+	}
+}
+@media (max-width:385px){
+	.admin-box{
+		width: 70%;
+		height: 55%;
+	}
+	.fa-solid{
+		font-size:30px;
+	}
+	.admin-box h4{
+		font-size:22px;
+	}
+	.admin-form input{
+		height: 32px;
+		font-size:12px;
+	}
+	.admin-form .admin-btn button{
+		height: 32px;
+		font-size:12px;
+	}
+	.admin-error{
+		font-size:12px;
+		line-height:20px;
+	}
+}
+@media (max-width:330px){
+	.admin-box{
+		width: 80%;
+		height: 55%;
+	}
+	fa-solid{
+		font-size:28px;
+	}
+	.admin-box h4{
+		font-size:20px;
+	}
+}
+/* ******************** Admin Login Responsive Ends ******************** */
+
+/* ******************** Admin Login Ends ******************** */
+
+/* ******************** Admin Dashboard Page Starts ******************** */
+.side-bar{
+	width:21vw;
+	min-height:100vh;
+	position:fixed;
+	background:#242526;
+	display:flex;
+	flex-direction:column;
+	z-index:2;
+}
+.side-bar .cmp-name{
+	width:90%;
+	height:15vh;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	margin:0 auto;
+}
+.cmp-name h1{
+	font-size: 25px;
+    font-family: 'Verdana', sans-serif;
+    font-weight: 500;
+    letter-spacing: 2px;
+	color:#fff;
+}
+#dropdown li .admin-dash{
+	width:100%;
+	font-size:20px;
+	color:rgba(255,255,255,0.7);
+	margin-bottom:10px;
+    font-family: 'Helvetica';
+	font-weight:500;
+	letter-spacing:1px;
+	padding-left:0px;
+	line-height:40px;
+}
+#dropdown li .admin-dash:hover{
+	color:#fff;
+	background-color:transparent;
+}
+.side-bar li{
+	width:85%;
+	padding:5px 0 0 40px;
+	margin-bottom:10px;
+}
+#dropdown{
+	width:100%;
+	height:auto;
+	margin-top:20px;
+}
+#dropdown li label{
+	cursor:pointer;
+}
+.admin-container{
+	position:absolute;
+	right:0;
+	width:79vw;
+	height:100vh;
+}
+.admin-container .admin-header{
+	position:fixed;
+	top:0;
+	right:0;
+	width:79vw;
+	height:10vh;
+	background-color:#fff;
+	display:flex;
+	box-shadow:0 4px 8px 0 rgba(0,0,0,0.2);
+	z-index:1;
+}
+.admin-nav{
+	width:50%;
+	height:100%;
+	display:flex;
+	align-items:center;
+}
+.admin-nav h2{
+	margin-left:30px;
+	font-family: "Montserrat", sans-serif, Arial, sans-serif;
+	font-weight:500;
+	letter-spacing:2px;
+	font-size:25px;
+}
+.admin-nav1{
+	width:50%;
+	height:100%;
+	display:flex;
+	align-items:center;
+	justify-content:flex-end;
+}
+.admin-nav1 h3{
+	font-family: "Montserrat", sans-serif, Arial, sans-serif;
+	font-weight:400;
+	letter-spacing:1px;
+	font-size:20px;
+	margin-right:25px;
+}
+.hod-profile{
+	width:85%;
+	position:relative;
+	margin:18vh auto 0 auto;
+}
+.title-box{
+	width:100%;
+	height:auto;
+	border-left:2px solid #242526;
+}
+.title-box h3{
+	font-family: "Montserrat", sans-serif, Arial, sans-serif;
+	font-weight:400;
+	letter-spacing:1px;
+	font-size:25px;
+	margin-left:10px;
+}
+#dropdown li label .active{
+	color:#fff;
+}
+/* ******************** Admin Dashboard Page Ends ******************** */
+
+/* ******************** Profile Page Starts ******************** */
+.profile-edit{
+	width:80%;
+	height:auto;
+	margin:50px auto 0 auto;
+}
+.profile1{
+	width:100%;
+	height:auto;
+	display:flex;
+	margin-bottom:30px;
+}
+.profile-inner{
+	width:50%;
+	height:auto;
+	display:flex;
+	flex-direction:column;
+}
+.profile-btn{
+	width:25%;
+	margin:20px auto 0 auto;
+	text-align:center;
+}
+.profile-btn button, .profile-btn a{
+	font-size:18px;
+	font-family: "Montserrat", sans-serif, Arial, sans-serif;
+	font-weight:500;
+	text-transform:uppercase;
+	letter-spacing:2px;
+	color:#fff;
+	background-color:#242526;
+	padding:8px;
+	border-radius:5px;
+	outline:none;
+	border:none;
+	cursor:pointer;
+}
+.profile-inner label{
+	font-size:18px;
+	font-family: "Montserrat", sans-serif, Arial, sans-serif;
+	font-weight:400;
+	letter-spacing:1px;
+	color:#242526;
+	margin-bottom:12px;
+}
+.profile-inner input{
+	width:80%;
+	height:45px;
+	outline:none;
+	border:none;
+	background-color:rgba(235, 236, 240,0.8);
+	color:#808080;
+	text-indent:15px;
+	font-size:18px;
+	font-family: "Montserrat", sans-serif, Arial, sans-serif;
+	font-weight:500;
+}
+.edit-form{
+	width:100%;
+	height:auto;
+	display:flex;
+	flex-direction:column;
+}
+.confirm-error{
+	font-size:15px;
+	font-family: "Montserrat", sans-serif, Arial, sans-serif;
+	font-weight:400;
+	color:red;
+	line-height:15px;
+	margin-bottom:15px;
+	text-align:center;
+}
+/* ******************** Profile Page Ends ******************** */
+
+/* ******************** Customer List Page Starts ******************** */
+.customer-box{
+	width:85%;
+	height:auto;
+	margin:50px auto 0 auto;
+}
+.customer-table li{
+	border-radius: 3px;
+    padding: 18px 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.table-header{
+	background-color: #95A5A6;
+    font-size: 15px;
+	font-family: "Montserrat", sans-serif, Arial, sans-serif;
+	font-weight:500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+	text-align:center;
+}
+.table-row{
+	background-color: #ffffff;
+    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.15);
+	font-size: 15px;
+	font-family: "Montserrat", sans-serif, Arial, sans-serif;
+	font-weight:500;
+	text-align:center;
+}
+.customer-col1{
+	flex-basis:10%;
+}
+.customer-col2{
+	flex-basis:20%;
+}
+.customer-col3{
+	flex-basis:30%;
+}
+.customer-col4{
+	flex-basis:30%;
+	background-color:;
+}
+.table-space{
+	display:flex;
+	justify-content:space-evenly;
+}
+.table-space a{
+	color:#242526;
+}
+.table-space a:hover{
+	color:red;
+}
+/* ******************** Customer List Page Ends ******************** */
+
+/* ******************** Package Booking Page Starts ******************** */
+.pkglist-box{
+	width:85%;
+	height:auto;
+	margin:50px auto 0 auto;
+}
+.pkglist-table li{
+	border-radius: 3px;
+    padding: 18px 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.pkgtable-header{
+	background-color: #95A5A6;
+    font-size: 15px;
+	font-family: "Montserrat", sans-serif, Arial, sans-serif;
+	font-weight:500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+	text-align:center;
+}
+.pkgtable-row{
+	background-color: #ffffff;
+    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.15);
+	font-size: 15px;
+	font-family: "Montserrat", sans-serif, Arial, sans-serif;
+	font-weight:500;
+	text-align:center;
+}
+.customercol1{
+	flex-basis:10%;
+}
+.customercol2{
+	flex-basis:20%;
+}
+.customercol3{
+	flex-basis:20%;
+}
+.customercol4{
+	flex-basis:15%;
+}
+.customercol5{
+	flex-basis:15%;
+}
+.pkgtable-space{
+	display:flex;
+	justify-content:space-evenly;
+}
+.pkgtable-space a{
+	color:#242526;
+}
+.pkgtable-space a:hover{
+	color:red;
+}
+.pkgview-box{
+	width:80%;
+	height:auto;
+	margin:50px auto 0 auto;
+}
+.profile1 .pkgname-input{
+	width:80%;
+}
+.pkg-space{
+	width:100%;
+	height:30px;
+}
+.pkg-download a{
+	font-size:18px;
+	font-family: "Montserrat", sans-serif, Arial, sans-serif;
+	font-weight:400;
+	letter-spacing:1px;
+	color:#242526;
+	margin:8px 0 12px 0;
+}
+.pkg-download a:hover{
+	color:red;
+}
+.pkgedit-box{
+	width:85%;
+	height:auto;
+	margin:50px auto 0 auto;
+}
+.profile-btn button{
+	font-size:18px;
+	font-family: "Montserrat", sans-serif, Arial, sans-serif;
+	font-weight:500;
+	text-transform:uppercase;
+	letter-spacing:2px;
+	color:#fff;
+	background-color:#242526;
+	padding:8px;
+	border-radius:5px;
+	outline:none;
+	border:none;
+	cursor:pointer;
+}
+.profile-inner select{
+	width:80%;
+	height:45px;
+	outline:none;
+	border:none;
+	background-color:rgba(235, 236, 240,0.8);
+	color:#808080;
+	text-indent:15px;
+	font-size:18px;
+	font-family: "Montserrat", sans-serif, Arial, sans-serif;
+	font-weight:500;
+}
+/* ******************** Package Booking Page Ends ******************** */
+
+/* ******************** Newsletter List Page Starts ******************** */
+.newsletter-box{
+	width:85%;
+	height:auto;
+	margin:50px auto 0 auto;
+}
+.customer-col-1{
+	flex-basis:20%;
+}
+.customer-col-2{
+	flex-basis:50%;
+}
+.customer-col-3{
+	flex-basis:20%;
+}
+/* ******************** Newsletter List Page Ends ******************** */
+
+/* ******************** Contact Form Page Starts ******************** */
+.contact-form-box{
+	width:85%;
+	height:auto;
+	margin:50px auto 0 auto;
+}
+.contact-container{
+	width:75%;
+	height:auto;
+	margin-bottom:30px;
+	box-shadow:0 5px 15px  rgba(0,0,0,0.3);
+}
+.contact-phase, .contact-phase1, .contact-phase3{
+	width:90%;
+	height:auto;
+	margin:0 auto;
+	display:flex;
+	align-items:center;
+}
+.contact-phase2{
+	width:90%;
+	height:auto;
+	margin:0 auto;
+}
+.contact-container h4{
+	font-size:18px;
+	font-family: "Montserrat", sans-serif, Arial, sans-serif;
+	font-weight:500;
+	padding:20px 20px 10px 0;
+	color:#242526;
+	text-wrap:break-word;
+}
+.contact-container p{
+	font-size:18px;
+	font-family: "Montserrat", sans-serif, Arial, sans-serif;
+	font-weight:500;
+	padding:20px 20px 10px 0;
+	color:#808080;
+	text-wrap:break-word;
+}
+.contact-phase2 p{
+	padding:0 0 10px 0;
+}
+.contact-space{
+	width:100%;
+	height:40px;
+}
+/* ******************** Contact Form Page Ends ******************** */
+
+/* ******************** Feedback Form Page Starts ******************** */
+.feedback-box{
+	width:85%;
+	height:auto;
+	margin:50px auto 0 auto;
+}
+.feedback-form-box{
+	width:75%;
+	height:auto;
+	margin-bottom:30px;
+	box-shadow:0 5px 15px  rgba(0,0,0,0.3);
+}
+.feedback-content{
+	width:100%;
+	height:auto;
+	display:flex;
+}
+.feed-top{
+	padding-top:20px;
+}
+.feedback-form-box h4, .feedback-content h4{
+	font-size:18px;
+	font-family: "Montserrat", sans-serif, Arial, sans-serif;
+	font-weight:500;
+	padding:10px 20px 0px 30px;
+	color:#242526;
+	text-wrap:break-word;
+}
+.feedback-content p{
+	font-size:18px;
+	font-family: "Montserrat", sans-serif, Arial, sans-serif;
+	font-weight:500;
+	padding:10px 20px 10px 0px;
+	color:#808080;
+	text-wrap:break-word;
+}
+.feedback-form-box .feed-desc{
+	font-size:18px;
+	font-family: "Montserrat", sans-serif, Arial, sans-serif;
+	font-weight:500;
+	padding:15px 20px 20px 30px;
+	color:#808080;
+	text-wrap:break-word;
+}
+/* ******************** Feedback Form Page Ends ******************** */

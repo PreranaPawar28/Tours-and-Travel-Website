@@ -1,0 +1,1098 @@
+*{
+	padding:0;
+	margin:0;
+	text-decoration:none;
+	list-style:none;
+	font-family: 'Poppins', sans-serif; 
+}
+html{
+	scroll-behavior: smooth;
+}
+body{
+	font-family: montserrat;
+	font-family: 'Poppins', sans-serif;
+	overscroll-behavior: none;
+}
+
+/* ******************** Login Page Starts ******************** */
+.login-container{
+	width: 100%;
+	height: 100vh;
+	display:flex;
+}
+.login-box1{
+	width:50%;
+	height:100%;
+	display:flex;
+	flex-direction: column;
+	justify-content:center;
+	align-items:center;
+	background-color:#27363b;
+}
+.login-box2{
+	width:50%;
+	height:100%;
+	display:flex;
+	flex-direction: column;
+	justify-content:center;
+	align-items:center;
+	background-image: url(../images/login-bg.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.container1{
+	width: 65%;
+	height: 400px;
+	display:flex;
+	justify-content:center;
+	flex-direction: column;
+}
+.login-header{
+	width: 65%;
+	height:auto;
+	display:flex;
+	flex-direction:column;
+	align-items:flex-start;
+
+}
+.login-header h4{
+	color:#f4837d;
+	font-weight:600;
+	font-size:30px;
+	letter-spacing:2px;
+	text-transform:uppercase;
+}
+.container2{
+	width: 60%;
+	height: 400px;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+}
+.login-header1{
+	width: 55%;
+	height:auto;
+	display:flex;
+	flex-direction:column;
+	align-items:flex-end;
+}
+.login-header1 h4{
+	color:#f4837d;
+	font-weight:600;
+	font-size:30px;
+	letter-spacing:2px;
+	text-transform:uppercase;
+}
+.login-header p, .login-header1 p{
+	font-size:16px;
+	color:#a0a3a3;
+	letter-spacing:2px;
+	padding-top: 5px;
+}
+.login-header1 p{
+	color: #cbcbcb;
+}
+.social-tab{
+	width: 100%;
+	height:auto;
+	display:flex;
+	justify-content:space-evenly;
+}
+.social{
+	width: 65px;
+	height: 65px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	border-radius:50%;
+	border: 2px solid transparent;
+	background: linear-gradient(#27363b, #27363b) padding-box,linear-gradient(90deg, #f4837d, #90c8cf) border-box;
+	transition: all 0.4s ease-in-out;
+}
+.social:hover{
+	transform: translateY(-10px);
+}
+.social i{
+	margin-top:2px;
+	font-size: 22px;
+	background: linear-gradient(90deg, #f4837d, #90c8cf);
+	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.social-title{
+	width: 100%;
+	height:auto;
+	display:flex;
+	justify-content:space-evenly;
+	margin-top: 15px;
+}
+.social-title h5{
+	font-size: 15px;
+	color: white;
+	font-weight: 400;
+	letter-spacing:2px;
+	margin-left: 5px;
+}
+.login_form, .common h5{
+	font-size:16px;
+	font-weight:400;
+	letter-spacing:2px;
+	color:#a0a3a3;
+}
+.pass-container, .user-container{
+	margin-top: 22px;
+}
+.login_form label{
+	font-size: 15px;
+	line-height: 30px;
+}
+.login-input{
+	width: 66%;
+	height: 45px;
+	border-radius:25px;
+	border: 1px solid #a0a3a3;
+	background:transparent;
+	outline: none;
+	margin-top:10px;
+	padding-left:20px;
+	color:white;
+	font-size: 15px;
+}
+.login-input:focus{
+	border: 1.8px solid transparent;
+	background-image: linear-gradient(#27363b, #27363b), linear-gradient(90deg, #f4837d, #90c8cf);
+	background-origin: border-box;
+	background-clip: padding-box, border-box;
+}
+.login_btn button{
+	width: 70%;
+	height: 45px;
+	border-radius: 25px;
+	border: none;
+	background: linear-gradient(90deg, #f4837d, #90c8cf);
+	color: white;
+	font-weight: 600;
+	font-size: 16px;
+	letter-spacing:2px;
+	padding-top:3px;
+	cursor:pointer;
+	margin-top: 35px;
+	transition: all 0.4s ease-in-out;
+}
+.login_btn button:hover{
+	transform: translateY(-6px);
+}
+.container1 p, .container1 a{
+	color: #a0a3a3;
+	letter-spacing:1px;
+	margin-top:16px;
+}
+.container1 a:hover{
+	color:#f4837d;
+}
+.error-msg{
+	color: red;
+	font-size:15px;
+	line-height:20px;
+	letter-spacing:1px;
+}
+.msg-space{
+	margin-top: 15px;
+}
+/* ******************** Login Page Responsive Starts ******************** */
+@media (max-width:1105px){
+	.social-tab{
+		justify-content:space-between;
+	}
+	.social-title{
+		justify-content:space-between;
+	}
+}
+@media (max-width:980px){
+	.login-header h4, .login-header1 h4{
+		font-size:25px;
+	}
+	.login-header p, .login-header1 p{
+		font-size: 14px;
+	}
+	.social{
+		width: 55px;
+		height: 55px;
+	}
+	.social i{
+		font-size:20px;
+	}
+	.social-title h5{
+		font-size:14px;
+	}
+	.login_form, .common h5{
+		font-size:14px;
+	}
+	.login-input{
+		width:70%;
+		height:40px;
+	}
+	.login_form label{
+		font-size:14px;
+	}
+	.login_btn button{
+		width:76%;
+		height:40px;
+	}
+	.container1 p, .container1 a{
+		font-size:14px;
+	}
+}	
+@media (max-width:820px){
+	.login-container{
+		flex-direction:column;
+	}
+	.login-box1{
+		width:100%;
+	}
+	.login-box2{
+		width: 100%;
+		background-image: none;
+		background-color:#27363b;
+	}
+	.login-header1{
+		width: 100%;
+		height:150px;
+		align-items:center;
+		justify-content: center;
+	}
+	.login-header{
+		width:100%;
+		height:120px;
+		align-items:center;
+		justify-content:center;
+	}
+	.container2{
+		width: 45%;
+		height: 150px;
+	}
+	.social-tab{
+		width: 92%;
+		margin: 0 auto;
+	}
+	.container1{
+		width: 80%;
+		height:auto;
+		align-items:center;
+	}
+	.login-input{
+		width:100%;
+		height:40px;
+	}
+	.login_form label{
+		font-size:16px;
+	}
+	.login_btn button{
+		width:110%;
+		height:40px;
+	}
+	.container1 p, .container1 a{
+		font-size:16px;
+	}
+	.login_form, .common h5{
+		font-size:16px;
+	}
+	.login-header1 h4{
+		margin-top:20px;
+	}
+	.error-msg{
+		font-size:14px;
+	}
+}
+@media (max-width:626px){
+	.social-tab{
+		width: 100%;
+	}
+	.social{
+		width: 45px;
+		height: 45px;
+	}
+	.social i{
+		font-size:18px;
+	}
+	.container2{
+		width: 55%;
+		height: 100px;
+	}
+}
+@media (max-width:495px){
+	.container2{
+		width: 50%;
+	}
+	.social-title{
+		display:none;
+	}
+}
+@media (max-width:400px){
+	.container2{
+		width: 60%;
+	}
+}
+@media (max-width:325px){
+	.container2{
+		width: 80%;
+	}
+	.login-header h4, .login-header1 h4{
+		font-size:22px;
+	}
+	.login-header p, .login-header1 p{
+		font-size: 12px;
+	}
+	.login-header1{
+		height:100px;
+	}
+	.login-header{
+		height:100px;
+	}
+	.login-input{
+		width:90%;
+		height:35px;
+	}
+	.login_form label{
+		font-size:14px;
+	}
+	.login_btn button{
+		width:100%;
+		height:35px;
+		margin-top: 25px;
+	}
+	.container1 p, .container1 a{
+		font-size:14px;
+	}
+	.login_form, .common h5{
+		font-size:14px;
+	}
+	.error-msg{
+		font-size:12px;
+	}
+}
+/* ******************** Login Page Responsive Ends ******************** */
+	
+/* ******************** Login Page Ends ******************** */
+
+/* ******************** Registration Page Starts ******************** */
+.registration-container{
+	width:100%;
+	height:auto;
+	display:flex;
+}
+.registration-box1{
+	width:50%;
+	height:auto;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+	background-image:url(../images/registration-bg.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.registration-box2{
+	width:50%;
+	height:auto;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	background-color:#27363b;
+}
+.registration-box1 h4{
+	color:white;
+	font-weight:600;
+	font-size:20px;
+	letter-spacing:2px;
+}
+.registration-box1 a{
+	color:white;
+	padding: 12px 20px 10px 20px;
+	border: 2px solid white;
+	border-radius:5px;
+	margin-top:15px;	
+}
+.registration-box1 a:hover{
+	color:black;
+	background-color:white;
+	border-color:white;
+}
+.registration-header2{
+	width:65%;
+	height:auto;
+	display:flex;
+	flex-direction:column;
+	align-items:flex-start;
+	margin-top: 45px;
+}
+.registration-header2 h4{
+	color:#f4837d;
+	font-weight:600;
+	font-size:30px;
+	letter-spacing:2px;
+	text-transform:uppercase;
+}
+.registration-header2 p{
+	font-size:16px;
+	color:#cbcbcb;
+	letter-spacing:2px;
+	padding-top: 5px;  
+}
+.reg-container2{
+	width:65%;
+	height:auto;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	margin-top:20px;
+	
+}
+.registration-form .common h5{
+	font-size:16px;
+	font-weight:400;
+	letter-spacing:1px;
+	color:#a0a3a3;
+	margin-bottom:5px;
+}
+.common{
+	margin-top:20px;
+}
+.registration-input{
+	width:70%;
+	height:30px;
+	border-radius:15px;
+	border: 1px solid #a0a3a3;
+	font-size:15px;
+	outline:none;
+	color:white;
+	background:transparent;
+	text-indent: 20px;
+}
+.registration-input:focus{
+	border: 1.8px solid transparent;
+	background-image: linear-gradient(#27363b, #27363b), linear-gradient(90deg, #f4837d, #90c8cf);
+	background-origin: border-box;
+	background-clip: padding-box, border-box;
+}
+.btn button{
+	width:70%;
+	height:40px;
+	border-radius:25px;	
+	border:none;
+	color:white;
+	font-weight:600;
+	font-size:16px;
+	letter-spacing:2px;
+	background: linear-gradient(90deg, #f4837d, #90c8cf);
+	cursor:pointer;
+	padding-top:3px;
+	margin-top:40px;
+	margin-bottom:43px;
+	transition: all 0.4s ease-in-out;
+}
+.btn button:hover{
+	transform: translateY(-6px);
+}
+.reg-error, .failed-msg, .success-msg{
+	color:red;
+	font-size:15px;
+	line-height:20px;
+	letter-spacing:1px;
+}
+.success-msg{
+	color: green;
+}
+/* ******************** Registration Page Responsive Starts ******************** */
+@media (max-width:1070px){
+	.registration-box1{
+		width:45%;
+	}
+	.registration-box2{
+		width:55%;
+	}
+	.registration-input{
+		width:80%;
+	}
+	.btn button{
+		width:81%;
+	}
+}
+@media (max-width:970px){
+	.registration-box1{
+		width:50%;
+	}
+	.registration-box2{
+		width:50%;
+	}
+	.registration-box1 h4{
+		font-size:18px;
+	}
+	.registration-box1 a{
+		font-size:15px;
+	}
+}
+@media (max-width:900px){
+	.registration-container{
+		flex-direction:column-reverse;
+	}
+	.registration-box1{
+		width:100%;
+		height:50px;
+		background-image:none;
+		background-color:#27363b;
+		align-items:flex-start;
+		flex-direction:row;
+		
+	}
+	.registration-box2{
+		width:100%;
+		align-items:center;
+		justify-content:center;
+	}
+	.registration-header2{
+		width:100%;
+		align-items:center;
+	}
+	.reg-container2{
+		width:100%;
+		align-items:center;
+	}
+	.registration-form{
+		width:50%;
+	}
+	.registration-input{
+		width:100%;
+	}
+	.common{
+		width:70%;
+		margin: 20px auto 0 auto;
+	}
+	.btn{
+		text-align:center;
+	}
+	.btn button{
+		width:70%;
+	}
+	.registration-box1 a{
+		padding: 0;
+		border:none;
+		border-radius:0;
+		margin-top:0;
+		letter-spacing:2px;
+	
+	}
+	.registration-box1 h4{
+		font-weight:200;
+		font-size:15px;
+	}
+	.btn button{
+		margin-bottom:30px;
+	}
+}
+@media (max-width:725px){
+	.common{
+		width:80%;
+	}
+	.btn button{
+		width:80%;
+	}
+}
+@media (max-width:590px){
+	.common{
+		width:100%;
+	}
+	.btn button{
+		width:100%;
+	}
+	.reg-error, .failed-msg, .success-msg{
+		font-size:14px;
+	}
+}
+@media (max-width:500px){
+	.registration-form{
+		width:65%;
+	}
+}
+@media (max-width:380px){
+	.registration-header2 h4{
+		font-size:25px;
+	}
+	.registration-header2 p{
+		font-size:13px;
+	}
+	.reg-error, .failed-msg, .success-msg{
+		font-size:12px;
+	}
+	.registration-form .common h5{
+		font-size:14px;
+	}
+	.btn button{
+		font-size:14px;
+	}
+	.registration-box1 a{
+		font-size:14px;
+	}
+	.registration-box1 h4{
+		font-size:14px;
+	}
+}
+@media (max-width:320px){
+	.registration-box1 a{
+		font-size:12px;
+	}
+	.registration-box1 h4{
+		font-size:12px;
+	}
+}
+/* ******************** Registration Page Responsive Ends ******************** */
+
+/* ******************** Registration Page Ends ******************** */
+
+/* ******************** User Dashboard Page Starts ******************** */
+.side-bar{
+	width:20vw;
+	min-height:100vh;
+	position:fixed;
+	background:#23395d;
+	display:flex;
+	flex-direction:column;
+	z-index:2;
+}
+.side-bar .cmp-name{
+	width:90%;
+	height:12vh;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	margin:0 auto;
+}
+.cmp-name h1{
+	font-size: 22px;
+    font-family: "Montserrat", sans-serif, Arial, sans-serif;
+    font-weight: 500;
+    letter-spacing:4px;
+	color:#fff;
+	text-transform:uppercase;
+}
+#dropmenu li .user-dash{
+	width:100%;
+	font-size:18px;
+	color:rgba(255,255,255,0.7);
+	margin-bottom:10px;
+    font-family: "Montserrat", sans-serif, Arial, sans-serif;
+	font-weight:400;
+	letter-spacing:2px;
+	padding-left:0px;
+}
+#dropmenu li .user-dash:hover{
+	color:#fff;
+	background-color:transparent;
+}
+.side-bar li{
+	width:85%;
+	padding:10px 0px 10px 32px;
+	margin-bottom:5px;
+	font-size:18px;
+	color:rgba(255,255,255,0.7);
+	font-family:"Montserrat", sans-serif, Arial, sans-serif;
+	font-weight:400;
+	letter-spacing:2px;
+	line-height:30px;
+}
+#dropmenu li a:hover{
+	color:#fff;
+}
+.list{
+	width:100%;
+	display:flex;
+	flex-direction:column;
+}
+#dropmenu{
+	width:100%;
+	height:auto;
+	margin-top:30px;
+}	
+#dropmenu li a{
+	font-size:16px;
+	color:rgba(255,255,255,0.7);
+	margin-bottom:10px;
+    font-family: "Montserrat", sans-serif, Arial, sans-serif;
+	font-weight:400;
+	letter-spacing:1px;
+	line-height:20px;
+	padding:10px 0px 10px 10px;
+}
+#dropmenu li label{
+	cursor:pointer;
+}
+#dropmenu label ~ input[type="radio"]{
+	display:none;
+}
+#dropmenu .list{
+	max-height:0;
+	overflow:hidden;
+	transition: max-height 0.5s;
+}
+#dropmenu label ~ input[type="radio"]:checked ~ .list{
+	max-height:150px;
+}
+.user-content{
+	position:absolute;
+	right:0;
+	width:80vw;
+	height:100vh;
+}
+.user-content .user-header{
+	position:fixed;
+	top:0;
+	right:0;
+	width:80vw;
+	height:11vh;
+	background-color:#fff;
+	display:flex;
+	align-items:center;
+	justify-content:flex-end;
+	box-shadow:0 4px 8px 0 rgba(0,0,0,0.2);
+	z-index:1;
+	display:flex;
+}
+.user-nav, .user-nav1{
+	width:50%;
+	height:100%;
+	display:flex;
+	align-items:center;
+}
+.user-nav{
+	margin-left:25px;
+}
+.user-nav h2{
+	font-family: "Montserrat", sans-serif, Arial, sans-serif;
+	font-weight:500;
+	letter-spacing:2px;
+	font-size:25px;
+}
+.user-nav1{
+	justify-content:flex-end;
+	margin-right:25px;
+}
+.user-nav1 h3{
+	font-family: "Montserrat", sans-serif, Arial, sans-serif;
+	font-weight:400;
+	letter-spacing:1px;
+	font-size:20px;
+	margin-right:20px;
+}
+.fa-arrow-right-from-bracket{
+	font-size:18px;
+	color:#242526;
+}
+.arrow1{
+	margin-left:20px;
+}
+.user-profile{
+	width:85%;
+	position:relative;
+	margin:18vh auto 0 auto;
+}
+.title-box{
+	width:100%;
+	height:auto;
+	border-left:2px solid #242526;
+}
+.title-box h3{
+	font-family: "Montserrat", sans-serif, Arial, sans-serif;
+	font-weight:400;
+	letter-spacing:1px;
+	font-size:25px;
+	margin-left:10px;
+}
+
+/* ******************** User Dashboard Page Ends ******************** */
+
+/* ******************** User Profile Page Starts ******************** */
+.profile-edit{
+	width:80%;
+	height:auto;
+	margin:50px auto 0 auto;
+}
+.profile1{
+	width:100%;
+	height:auto;
+	display:flex;
+	margin-bottom:30px;
+}
+.profile-inner{
+	width:50%;
+	height:auto;
+	display:flex;
+	flex-direction:column;
+}
+.profile-btn{
+	width:25%;
+	margin:20px auto 0 auto;
+	text-align:center;
+}
+.profile-btn button, .profile-btn a{
+	font-size:18px;
+	font-family: "Montserrat", sans-serif, Arial, sans-serif;
+	font-weight:500;
+	text-transform:uppercase;
+	letter-spacing:2px;
+	color:#fff;
+	background-color:#1e3f66;
+	padding:8px;
+	border-radius:5px;
+	outline:none;
+	border:none;
+	cursor:pointer;
+}
+.profile-inner label{
+	font-size:18px;
+	font-family: "Montserrat", sans-serif, Arial, sans-serif;
+	font-weight:400;
+	letter-spacing:1px;
+	color:#242526;
+	margin-bottom:12px;
+}
+.profile-inner input{
+	width:80%;
+	height:45px;
+	outline:none;
+	border:none;
+	background-color:rgba(235, 236, 240,0.8);
+	color:#808080;
+	text-indent:15px;
+	font-size:18px;
+	font-family: "Montserrat", sans-serif, Arial, sans-serif;
+	font-weight:500;
+}
+.edit-form{
+	width:100%;
+	height:auto;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+}
+.confirm-error{
+	font-size:15px;
+	font-family: "Montserrat", sans-serif, Arial, sans-serif;
+	font-weight:400;
+	color:red;
+	line-height:15px;
+	margin-bottom:15px;
+}
+/* ******************** User Profile Page Ends ******************** */
+
+/* ******************** Feedback Page Starts ******************** */
+.feed-box{
+	width:80%;
+	height:auto;
+	margin:50px auto 0 auto;	
+}
+.feed-form{
+	width:100%;
+	height:auto;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+}
+.feed-inner{
+	width:50%;
+	height:auto;
+	display:flex;
+	flex-direction:column;
+	margin-bottom:25px;
+}
+.feed-inner label{
+	font-size:18px;
+	font-family: "Montserrat", sans-serif, Arial, sans-serif;
+	font-weight:400;
+	letter-spacing:1px;
+	color:#242526;
+	margin-bottom:12px;
+}
+.feed-inner input, .feed-inner textarea{
+	width:100%;
+	height:45px;
+	outline:none;
+	border:none;
+	background-color:rgba(235, 236, 240,0.8);
+	color:#808080;
+	text-indent:15px;
+	font-size:16px;
+	font-family: "Montserrat", sans-serif, Arial, sans-serif;
+	font-weight:500;
+	text-indent:15px;
+	border-radius:5px;
+}
+.feed-inner textarea{
+	height:250px;
+	resize:none;
+	padding-top:20px;
+}
+.feed-inner input::placeholder, .feed-inner textarea::placeholder{
+	font-size:16px;
+	font-family: "Montserrat", sans-serif, Arial, sans-serif;
+	font-weight:400;
+	letter-spacing:1px;
+}
+.feed-inner button{
+	font-size:18px;
+	font-family: "Montserrat", sans-serif, Arial, sans-serif;
+	font-weight:500;
+	text-transform:uppercase;
+	letter-spacing:2px;
+	color:#fff;
+	background-color:#1e3f66;
+	padding:8px;
+	border-radius:5px;
+	outline:none;
+	border:none;
+	cursor:pointer;
+	margin:10px 0 30px 0;
+}
+.success-msg, .failed-msg{
+	font-size:15px;
+	font-family: "Montserrat", sans-serif, Arial, sans-serif;
+	font-weight:400;
+	color:green;
+	line-height:15px;
+	margin-bottom:15px;
+}
+.failed-msg{
+	color:red;
+}
+/* ******************** Feedback Page Ends ******************** */
+
+/* ******************** Feedback History Page Starts ******************** */
+.feed-hist-box{
+	width:80%;
+	height:auto;
+	margin:50px auto 0 auto;
+}
+.feed-container{
+	width:85%;
+	height:auto;
+	margin:0 auto 30px auto;
+	background-color:#fff;
+	border-radius:5px;
+	box-shadow:0 3px 8px 0 rgba(0,0,0,0.2);
+	
+}
+.feed-container h4{
+	font-size:28px;
+	font-family: "Montserrat", sans-serif, Arial, sans-serif;
+	font-weight:500;
+	letter-spacing:1px;
+	padding:20px 0 20px 20px;
+	color:#242526;
+}
+.feed-container p{
+	font-size:18px;
+	font-family: "Montserrat", sans-serif, Arial, sans-serif;
+	font-weight:400;
+	letter-spacing:1px;
+	padding:0 20px 30px 20px;
+	color:#808080;
+	word-wrap: break-word;
+}
+.feed-space{
+	width:100%;
+	height:40px;
+}
+/* ******************** Feedback History Page Ends ******************** */
+
+/* ******************** Contact History Page Starts ******************** */
+.contact-hist-box{
+	width:80%;
+	height:auto;
+	margin:50px auto 0 auto;
+}
+.contact-container{
+	width:70%;
+	height:auto;
+	box-shadow:0 4px 8px 0 rgba(0,0,0,0.2);
+	margin-bottom:30px;
+}
+.contact-container h3{
+	font-size:20px;
+	font-family: "Montserrat", sans-serif, Arial, sans-serif;
+	font-weight:500;
+	padding:0px 20px 20px 20px;
+	text-wrap:break-word;
+	color:#242526;
+}
+.contact-container h5, .contact-container p{
+	font-size:20px;
+	font-family: "Montserrat", sans-serif, Arial, sans-serif;
+	font-weight:500;
+	padding:0 0 10px 20px;
+	text-wrap:break-word;
+	color:#242526;
+}
+.contact-container p{
+	font-size:18px;
+	color:#808080;
+	padding:0 0 20px 22px;
+}
+.title-display{
+	width:90%;
+	height:auto;
+	display:flex;
+	justify-content:flex-end;
+	margin:0 auto;
+}
+.title-display h3{
+	font-size:14px;
+	font-family: "Montserrat", sans-serif, Arial, sans-serif;
+	font-weight:400;
+	padding:5px 10px;
+	color:green;
+	border:1px solid green;
+	border-radius:5px;
+	margin-top:20px;
+}
+/* ******************** Contact History Page Ends ******************** */
+
+/* ******************** Packages History Page Starts ******************** */
+.packages-box{
+	width:80%;
+	height:auto;
+	margin:50px auto 0 auto;
+}
+.packages-conatiner{
+	width:100%;
+	height:auto;
+	box-shadow:0 4px 8px 0 rgba(0,0,0,0.2);
+	margin-bottom:30px;
+}
+.packages-content{
+	width:90%;
+	height:auto;
+	margin:0 auto;
+	display:flex;
+}
+.packages-content h5, .packages-content p, .packages-content a{
+	font-size:18px;
+	font-family: "Montserrat", sans-serif, Arial, sans-serif;
+	font-weight:500;
+	color:#242526;
+	padding-right:10px;
+	margin:10px 0 10px 0;
+}
+.packages-content p, .packages-content a{
+	color:#808080;
+	padding-right:50px;
+}
+.packages-content a:hover{
+	color:red;
+}
+.pkg-status p{
+	color:green;
+}
+.pkg-space{
+	width:100%;
+	height:40px;
+}
+/* ******************** Packages History Page Ends ******************** */
